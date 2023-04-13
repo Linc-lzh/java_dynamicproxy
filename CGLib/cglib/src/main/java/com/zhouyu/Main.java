@@ -22,7 +22,9 @@ public class Main {
                 if (method.getName().equals("test")) {
                     System.out.println("before...");
 
-                    //methodProxy.invoke(o, objects);  // test()  Method
+                    //methodProxy.invoke(o, objects);  // test()  Method will occur error
+                    // o = proxy object
+                    //methodProxy.invoke(target, objects); // test()  Method
                     //methodProxy.invokeSuper(target, objects);  // CGLIB$test$4() Method
                     method.invoke(target, objects);
 
